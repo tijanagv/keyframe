@@ -43,29 +43,71 @@ a {
   color: rgb(185, 45, 69);
 }
 
-#page-1 {
-  background-color: teal;
-  
+#page-1, #page-2 {
+  background-color:  rgb(219, 198, 7, 0.30);  
+  position: relative;
 }
 
-#page-2 {
-  background-color: rgb(131, 18, 236);
-  
+#page-1:before {
+  content: '';
+  background: url(./img/spring.jpg) no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+#page-2:before {
+  content: '';
+  background: url(./img/summer.jpg) no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 #page-3 {
-  background-color: rgb(219, 198, 7);
+  background-color:  rgba(2, 126, 126, 0.35);
+  position: relative;
+}
+
+#page-3:before {
+  content: '';
+  background: url(./img/autumn.jpg) no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 #page-4 {
-  background-color: rgb(23, 83, 65);
+  background-color: rgba(23, 83, 65, 0.60);
+  position: relative;
+}
+
+#page-4:before {
+  content: '';
+  background: url(./img/winter.jpg) no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 
 /* Page Animation */
 #page-1 h1 {
   transform: translateY(-1200px);
-  animation: heading 2s ease-in forwards;
+  animation: heading 1.5s ease-in forwards;
 }
 
 #page-1 p {
