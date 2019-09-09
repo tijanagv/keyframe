@@ -1,2 +1,2 @@
 # keyframe
-Practising keyframe presentation styled website.
+Practising presentation with animation.
