@@ -36,21 +36,84 @@ p {
   margin: 10px;
   border-radius: 3px;
   display: inline-block;
+  transition: opacity 1s ease-in-out;
 }
 
 a {
   text-decoration: none;
   color: rgb(185, 45, 69);
 }
+/* Hamburger Menu  */
+
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 60px;
+  width: 60px;
+  padding: 10px;
+  background: rgba(15, 102, 83, 0.25);
+}
+
+/* Hamburger Lines */
+.menu-wrap .hamburger > div {
+  position: relative;
+  top: 10px;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hamburger Lines before and after */
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+.menu-wrap .hamburger > div::after {
+  top: 20px;
+}
+
 
 #page-1, #page-2 {
-  background-color:  rgb(219, 198, 7, 0.30);  
+  background-color:  rgba(219, 198, 7, 0.30);  
   position: relative;
 }
 
-#page-1:before {
+#page-1:before,
+#page-2:before,
+#page-3:before,
+#page-4:before {
   content: '';
-  background: url(./img/spring.jpg) no-repeat center center/cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -58,17 +121,12 @@ a {
   height: 100%;
   z-index: -1;
 }
-
+#page-1:before {
+  background: url(./img/spring.jpg) no-repeat center center/cover;
+}
 
 #page-2:before {
-  content: '';
   background: url(./img/summer.jpg) no-repeat center center/cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
 }
 
 #page-3 {
@@ -77,14 +135,7 @@ a {
 }
 
 #page-3:before {
-  content: '';
   background: url(./img/autumn.jpg) no-repeat center center/cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
 }
 
 #page-4 {
@@ -93,14 +144,7 @@ a {
 }
 
 #page-4:before {
-  content: '';
   background: url(./img/winter.jpg) no-repeat center center/cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
 }
 
 
