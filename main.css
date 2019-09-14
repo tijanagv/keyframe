@@ -19,9 +19,13 @@ body {
 }
 
 h1 {
-  font-size: 45px;
-  line-height: 1.4;
-  padding: 10px;
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 40px;
+  padding: 15px;
+  text-transform: uppercase;
 }
 
 p {
@@ -31,8 +35,9 @@ p {
 
 .btn {
   padding: 20px 25px;
-  background-color: silver;
-  color: rgb(185, 45, 69);
+  font-size: 20px;
+  background-color: rgba(248, 246, 132, 0.8);
+  color: rgb(12, 121, 112);
   margin: 10px;
   border-radius: 3px;
   display: inline-block;
@@ -77,6 +82,7 @@ a {
   justify-content: center;
   align-items: center;
 }
+
 
 /* Hamburger Lines */
 .menu-wrap .hamburger > div {
@@ -232,6 +238,11 @@ a {
 #page-1 h1 {
   transform: translateY(-1200px);
   animation: heading 1.5s ease-in forwards;
+}
+
+#page-1 h2 {
+  transform: translateY(-1200px);
+  animation: heading 1s ease-in forwards;
 }
 
 #page-1 p {
